@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/connectionBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_black"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/measurmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#1D2027"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imgArrowIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/setting_arrow_white"
+                android:contentDescription="@string/blank" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/txtMeasurement"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/imgArrowIcon"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="8dp"
+                android:text="Measurement Units"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#1D2027"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imgArrowFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/setting_arrow_white"
+                android:contentDescription="@string/blank" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/txtFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/imgArrowFeedback"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="8dp"
+                android:text="Feedback"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#1D2027"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imgArrowConfigure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/setting_arrow_white"
+                android:contentDescription="@string/blank" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/txtConfiure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/imgArrowConfigure"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="8dp"
+                android:text="Configure"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#1D2027"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imgArrowTrouble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/setting_arrow_white"
+                android:contentDescription="@string/blank" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/txtTroubleShoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/imgArrowTrouble"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="8dp"
+                android:text="Troubleshoot Somabar"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#1D2027"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imgArrowAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/setting_arrow_white"
+                android:contentDescription="@string/blank" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/txtAbout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/imgArrowAbout"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="8dp"
+                android:text="About Somabar"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/signup_logo"
+                android:contentDescription="@string/blank" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    
+     <com.slidinglayer.SlidingLayer
+        android:id="@+id/slidingLayer"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+
+        app:stickTo="bottom"
+        app:closeOnTapEnabled="true"
+        app:offsetWidth="@dimen/home_filter_slider_offset" >
+
+        <include layout="@layout/slider_inner_layout" />
+    </com.slidinglayer.SlidingLayer>
+    
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:id="@+id/header_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/img_mainHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top_header_icon"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_launcher"
+        android:visibility="visible" />
+
+    <com.pyntail.somabar.ui.views.AnyTextView
+        android:id="@+id/txt_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top_header_txt"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
+        android:visibility="invisible"
+        app:typeface="opensans_extralight.ttf" />
+
+    <ImageButton
+        android:id="@+id/header_btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_left"
+        android:layout_marginTop="@dimen/margin_top_header"
+        android:layout_toLeftOf="@+id/header_btn_right"
+        android:contentDescription="@string/app_name" />
+
+    <ImageButton
+        android:id="@+id/header_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/margin_top_header"
+        android:contentDescription="@string/app_name" />
+    
+    
+    <CheckBox
+        android:id="@+id/header_check_box_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/margin_top_header"
+        android:contentDescription="@string/app_name" />
+    
+
+    <com.pyntail.somabar.ui.views.AnyTextView
+        android:id="@+id/txt_rightOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/margin_top_header"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/orange"
+        android:visibility="invisible"
+        app:typeface="opensans_extralight.ttf" />
+
+    <ImageView
+        android:id="@+id/header_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/txt_Heading"
+        android:layout_marginLeft="18dp"
+        android:contentDescription="@string/app_name"
+        android:padding="5dp" />
+
+</RelativeLayout>

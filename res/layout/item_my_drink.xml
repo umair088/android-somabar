@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/discover_item_height"
+    android:layout_margin="5dp"
+    android:id="@+id/mainLayout"
+    android:background="@drawable/item_my_drink_bk"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="2.0" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_weight="1.0"
+        android:background="@drawable/item_my_drink_half_rounded"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <com.pyntail.somabar.ui.views.AnyTextView
+            android:id="@+id/txtDrinkTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/blank"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:text="Black Razz &amp; Lemon Lime Soda"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:typeface="opensans_extralight.ttf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:layout_below="@id/txtDrinkTitle"
+            android:orientation="vertical"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/imgDrink"
+               android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/post_drinkimg1"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drink_post_arrow"
+        android:contentDescription="@string/blank" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_ingredient_height"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical" >
+
+            <!-- DUMMY LAYOUT -->
+
+            <LinearLayout
+                android:id="@+id/ioz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/itxtQuantity"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text=".5oz"
+                    android:textColor="#636571"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/itxtIngredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text="Lime"
+                    android:textColor="#C0C5CB"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/toz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ioz"
+                android:orientation="horizontal" >
+
+               <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/iitxtQuantity"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text=".2oz"
+                    android:textColor="#636571"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/iitxtIngredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text="Vodka"
+                    android:textColor="#C0C5CB"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toz"
+                android:orientation="horizontal" >
+
+                 <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/iiitxtQuantity"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text=".3oz"
+                    android:textColor="#636571"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/iiitxtIngredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text="Mineral Water"
+                    android:textColor="#C0C5CB"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bos"
+                android:orientation="horizontal" >
+
+                
+                  <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/ivtxtQuantity"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text=".4oz"
+                    android:textColor="#636571"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/ivtxtIngredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text="Vodka"
+                    android:textColor="#C0C5CB"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+              
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/los"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kos"
+                android:orientation="horizontal" >
+
+               <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/vtxtQuantity"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text=".3oz"
+                    android:textColor="#636571"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/vtxtIngredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text="Mineral Water"
+                    android:textColor="#C0C5CB"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/los"
+                android:orientation="horizontal" >
+
+              <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/vitxtQuantity"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text=".5oz"
+                    android:textColor="#636571"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/vitxtIngredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text="Wild Cherry"
+                    android:textColor="#C0C5CB"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pos"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+               <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/viitxtQuantity"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text=".2oz"
+                    android:textColor="#636571"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:id="@+id/viitxtIngredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/blank"
+                    android:gravity="left|center_vertical"
+                    android:text="Orange Juice"
+                    android:textColor="#C0C5CB"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:typeface="opensans_extralight.ttf" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginTop="-8dp">
+
+            
+              <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center" >
+
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/deleteContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:id="@+id/imgDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bin_icon_white"
+                    android:contentDescription="@string/blank"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            
+            
+               
+            
+            <RelativeLayout
+                android:id="@+id/shareContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/share_icon"
+                    android:contentDescription="@string/blank"
+                    android:gravity="center" />
+            </RelativeLayout>
+            
+             <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center" >
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

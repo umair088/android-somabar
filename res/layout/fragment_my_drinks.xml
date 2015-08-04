@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+      xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#F2F6F7"
+    android:orientation="vertical" >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:soundEffectsEnabled="true"
+        tools:list_item="@layout/item_discover_drink_view" />
+    
+    
+    
+     <com.pyntail.somabar.ui.views.AnyTextView
+        android:id="@+id/noDataFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="There is no drink found"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        app:typeface="opensans_extralight.ttf" />
+    
+
+</LinearLayout>

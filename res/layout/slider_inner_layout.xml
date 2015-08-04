@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:splitMotionEvents="false" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/measurement_btn_bk" >
+        
+       <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/txtTroubleShoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+              
+                android:text="Ounces (oz)"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+    </RelativeLayout>
+        
+        
+    <RelativeLayout
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/measurement_btn_bk" >
+        
+       <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+               
+                android:layout_centerInParent="true"
+                android:text="Milimeters (ml)"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+    </RelativeLayout>
+    
+     
+
+</LinearLayout>

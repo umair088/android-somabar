@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <LinearLayout
+                android:id="@+id/chooseImageContainer"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/background_choose_image"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.pyntail.somabar.ui.views.AnyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/blank"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="Choose Image"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:typeface="opensans_extralight.ttf" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.pyntail.somabar.ui.views.AnyTextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/orange"
+            android:contentDescription="@string/blank"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Input Cocktail Label"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:typeface="opensans_extralight.ttf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="15dp" >
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="Ingredients in"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="Ounces"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+        </LinearLayout>
+
+        <!-- 1st INGREDIENT -->
+
+        <LinearLayout
+            android:id="@+id/i_ingredientContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/binContainer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="#FD0000"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bin_icon_white"
+                    android:contentDescription="@string/blank"
+                    android:visibility="visible" >
+                </ImageView>
+            </RelativeLayout>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.25"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="Orange Juice"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <SeekBar
+                android:id="@+id/i_ingrSeekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.35"
+                android:background="@android:color/transparent"
+                android:max="60"
+                android:progressDrawable="@drawable/rangebar_progress"
+                android:thumb="@drawable/rangebar_thumb"
+                android:thumbOffset="2dp" >
+            </SeekBar>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/i_txtCurrentValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="/"
+                 android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="60"
+                 android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+        </LinearLayout>
+
+        <!-- 2nd Ingredient Container -->
+
+        <LinearLayout
+            android:id="@+id/ii_ingredientContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/ii_binContainer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="#FD0000"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bin_icon_white"
+                    android:contentDescription="@string/blank"
+                    android:visibility="visible" >
+                </ImageView>
+            </RelativeLayout>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.25"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="Lime"
+                 android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <SeekBar
+                android:id="@+id/ii_ingrSeekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.35"
+                android:background="@android:color/transparent"
+                android:max="40"
+                android:progressDrawable="@drawable/rangebar_progress"
+                android:thumb="@drawable/rangebar_thumb"
+                android:thumbOffset="2dp" >
+            </SeekBar>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/ii_txtCurrentValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="/"
+                 android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/ii_txtMaxValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="40"
+                 android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+        </LinearLayout>
+
+        <!-- 3RD INGREDIENT CONTAINER -->
+
+        <LinearLayout
+            android:id="@+id/iii_ingredientContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/iii_binContainer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="#FD0000"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bin_icon_white"
+                    android:contentDescription="@string/blank"
+                    android:visibility="visible" >
+                </ImageView>
+            </RelativeLayout>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.25"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="Vodka"
+                 android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <SeekBar
+                android:id="@+id/iii_ingrSeekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.35"
+                android:background="@android:color/transparent"
+                android:max="50"
+                android:progressDrawable="@drawable/rangebar_progress"
+                android:thumb="@drawable/rangebar_thumb"
+                android:thumbOffset="2dp" >
+            </SeekBar>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/iii_txtCurrentValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="/"
+                 android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/iii_txtMaxValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="50"
+               android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+        </LinearLayout>
+
+        <!-- 4th INGREDIENT CONTAINER -->
+
+        <LinearLayout
+            android:id="@+id/iv_ingredientContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/iv_binContainer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="#FD0000"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bin_icon_white"
+                    android:contentDescription="@string/blank"
+                    android:visibility="visible" >
+                </ImageView>
+            </RelativeLayout>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.25"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="Mineral Water"
+                 android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <SeekBar
+                android:id="@+id/iv_ingrSeekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.35"
+                android:background="@android:color/transparent"
+                android:max="70"
+                android:progressDrawable="@drawable/rangebar_progress"
+                android:thumb="@drawable/rangebar_thumb"
+                android:thumbOffset="2dp" >
+            </SeekBar>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/iv_txtCurrentValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="/"
+                 android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/iv_txtMaxValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="70"
+              android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+        </LinearLayout>
+
+        <!-- 5th INGREDIENT CONTAINER -->
+
+        <LinearLayout
+            android:id="@+id/v_ingredientContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/v_binContainer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="#FD0000"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bin_icon_white"
+                    android:contentDescription="@string/blank"
+                    android:visibility="visible" >
+                </ImageView>
+            </RelativeLayout>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.25"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="Juice"
+                 android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <SeekBar
+                android:id="@+id/v_ingrSeekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.35"
+                android:background="@android:color/transparent"
+                android:max="50"
+                android:progressDrawable="@drawable/rangebar_progress"
+                android:thumb="@drawable/rangebar_thumb"
+                android:thumbOffset="2dp" >
+            </SeekBar>
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/v_txtCurrentValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="/"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/v_txtMaxValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="50"
+                 android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:typeface="opensans_extralight.ttf" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/btnCreateNewDrink"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/add_ingredients_btn"
+                android:contentDescription="@string/blank" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCreateNewDrink"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="Add More\n Ingredients"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:typeface="opensans_extralight.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/btnAdd"
+                android:background="#BDBEC2"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="20dp"
+                android:singleLine="true"
+                android:text="Post Drink"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:typeface="opensans_extralight.ttf" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:id="@+id/list_item_child"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:orientation="horizontal" >
+
+    
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="wrap_content"
+        >
+    <com.pyntail.somabar.ui.views.AnyTextView
+        android:id="@+id/list_item_child_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/blank"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:text="Vodka"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:typeface="opensans_extralight.ttf" />
+
+    <com.pyntail.somabar.ui.views.AnyTextView
+        android:id="@+id/childCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/list_item_child_view"
+        android:gravity="left"
+        android:paddingLeft="3dp"
+        android:text="(30)"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        app:typeface="opensans_extralight.ttf" />
+
+    </RelativeLayout>
+    
+    <CheckBox
+        android:id="@+id/list_item_text_child"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.2"
+        android:background="@android:color/transparent"
+        android:button="@drawable/filter_tick_selector"
+        android:checked="true"
+     
+        
+        android:gravity="center" />
+
+</LinearLayout>

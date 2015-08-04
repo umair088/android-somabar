@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <com.pyntail.somabar.ui.views.AnyTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/blank"
+        android:gravity="center"
+        android:padding="2dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:typeface="opensans_extralight.ttf" />
+
+    <com.pyntail.somabar.ui.views.AnyTextView
+        android:id="@+id/tv_title_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/blank"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="2dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:typeface="opensans_bold.ttf" />
+
+    <View
+        android:id="@+id/imgSeperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/menu_seperator_color" />
+
+</LinearLayout>

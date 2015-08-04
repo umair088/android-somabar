@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar" >
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/iv_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/shadow"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/sv_left_menu"
+        android:layout_width="@dimen/side_menu_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|center_vertical"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/menuContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                android:id="@+id/configureAccountContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" 
+                android:layout_alignBottom="@+id/txtUserName"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/btn_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_signup_facebook"
+                    android:contentDescription="@string/blank"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/btn_signup"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/btn_signup_white"
+                        android:contentDescription="@string/blank"
+                        android:gravity="center" />
+
+                    <ImageButton
+                        android:id="@+id/btn_signin"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/btn_signin_white"
+                        android:contentDescription="@string/blank"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.pyntail.somabar.ui.views.RoundedImageView
+                android:id="@+id/imgUser"
+                android:layout_width="@dimen/side_menu_profile_image"
+                android:layout_height="@dimen/side_menu_profile_image"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal" 
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_holder"
+                app:corner_radius="25dip"
+                app:oval="true" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/txtUserTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                android:layout_below="@id/imgUser"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:typeface="opensans_bold.ttf" />
+
+            <com.pyntail.somabar.ui.views.AnyTextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtUserTitle"
+                android:layout_alignRight="@id/txtUserTitle"
+                android:layout_below="@id/txtUserTitle"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="user name"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:typeface="opensans_extralight.ttf" />
+
+            <LinearLayout
+                android:id="@+id/layout_left_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUserName"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_right_menu"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:paddingRight="30dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/layout_right_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

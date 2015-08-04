@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_pick_image"
+    android:layout_margin="4dp"
+    android:background="@drawable/item_my_drink_bk"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="2.0" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pick_image_bk" >
+
+        <com.pyntail.somabar.ui.views.AnyTextView
+            android:id="@+id/txtDrinkTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/blank"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Gin Tonic"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:typeface="opensans_extralight.ttf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txtDrinkTitle"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imgDrink"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/post_drinkimg1"
+                android:contentDescription="@string/blank"
+                android:gravity="center"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

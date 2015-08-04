@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F6F7"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/discoverDrinkContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#CECECE"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:background="@drawable/search_bar_rounded_corner_bg"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <ImageView
+                android:id="@+id/imgSearchIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/blank"
+                android:src="@drawable/search_icon" />
+
+            <com.pyntail.somabar.ui.views.AnyEditTextView
+                android:id="@+id/editTxtSearchKeyword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:inputType="textNoSuggestions"
+                android:paddingLeft="8dp"
+                android:text=""
+                android:textColor="@android:color/darker_gray"
+                android:textColorHint="@android:color/darker_gray"
+                app:typeface="opensans_light.ttf" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:groupIndicator="@null"
+        android:visibility="gone" >
+    </ExpandableListView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:soundEffectsEnabled="true"
+        tools:list_item="@layout/item_discover_drink_view" />
+
+    <com.pyntail.somabar.ui.views.AnyTextView
+        android:id="@+id/noDataFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="There is no drink found"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        app:typeface="opensans_extralight.ttf" />
+
+</LinearLayout>

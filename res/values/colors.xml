@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="statusbar_bg">#FF006080</color>
+    <color name="orange">#E24500</color>
+     <color name="menu_seperator_color">#464853</color>
+    <color name="home_connection_status_bar_color">#431400</color>
+    <color name="dark_grey">#2F313D</color>
+    <color name="milky_white">#F2F6F7</color>
+  
+    
+    <color name="transparent">#00000000</color>
+    <color name="setting_grey">#1D2027</color>
+    <color name="home_rippelColor">#431400</color>
+    
+    
+</resources>

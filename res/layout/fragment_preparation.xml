@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pyntail.somabar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/post_drinkimg1"
+        android:background="@android:color/white" >
+    </ImageButton>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@android:color/black" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" >
+
+        <com.pyntail.somabar.ui.views.AnyTextView
+            android:id="@+id/itxtStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/blank"
+            android:gravity="center"
+             android:visibility="gone"
+            android:singleLine="true"
+            android:text="Preparation Instruction"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            app:typeface="LATO-BOLD.TTF" />
+
+        <com.pyntail.somabar.ui.views.AnyTextView
+             android:id="@+id/itxtDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/blank"
+            android:gravity="left"
+             android:visibility="gone"
+            android:singleLine="false"
+            android:text="Lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            app:typeface="opensans_regular.ttf" />
+
+        <com.pyntail.somabar.ui.views.AnyTextView
+             android:id="@+id/iitxtStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/blank"
+            android:gravity="center"
+             android:visibility="gone"
+            android:singleLine="true"
+            android:text="Garnishing Instruction"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            app:typeface="LATO-BOLD.TTF" />
+
+        <com.pyntail.somabar.ui.views.AnyTextView
+             android:id="@+id/iitxtDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/blank"
+            android:gravity="left"
+             android:visibility="gone"
+            android:singleLine="false"
+            android:text="Lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum sum lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            app:typeface="opensans_regular.ttf" />
+        
+        
+        
+         <com.pyntail.somabar.ui.views.AnyTextView
+             android:id="@+id/iiitxtStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/blank"
+            android:gravity="center"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:text="Garnishing Instruction"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            app:typeface="LATO-BOLD.TTF" />
+
+        <com.pyntail.somabar.ui.views.AnyTextView
+             android:id="@+id/iiitxtDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/blank"
+            android:gravity="left"
+            android:singleLine="false"
+            android:visibility="gone"
+            android:text="Lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum sum lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum lorem sum"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            app:typeface="opensans_regular.ttf" />
+    </LinearLayout>
+
+</RelativeLayout>

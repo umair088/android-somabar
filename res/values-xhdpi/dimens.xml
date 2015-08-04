@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- reside menu stuff -->
+    <dimen name="reside_menu_item_padding">8dp</dimen>
+    <item name="reside_menu_translate_left" format="float" type="dimen">5.0</item>
+
+    
+    
+     <!-- SIDE MENU -->
+    
+    <dimen name="side_menu_width">250dp</dimen>
+        
+    <dimen name="side_menu_profile_image">75dp</dimen>
+    
+     <!-- SIGN UP -->
+    <dimen name="sign_up_edit_text_height">50dp</dimen>
+    <dimen name="sign_up_user_image">115dp</dimen>
+    
+    
+    
+     <!-- DISCOVER DRINK -->
+    <dimen name="discover_item_height">210dp</dimen>
+    <dimen name="discover_ingredient_height">180dp</dimen>
+    
+    
+     <!-- DISCOVER DRINK -->
+    <dimen name="item_community_user_image">60dp</dimen>
+    
+    
+    <!-- PICK IMAGE LISTING  --> 
+    <dimen name="item_pick_image">155dp</dimen>
+    
+</resources>
